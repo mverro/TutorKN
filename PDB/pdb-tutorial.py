@@ -1,5 +1,4 @@
 
-
 def forward_euler(x0,xn,y0,f,h):
     y = y0
     x = x0
@@ -15,9 +14,9 @@ def f(y,t) :
     return 1-(y*t)**2
 
 
-hasil = forward_euler(0,0.1,0,f,0.01)
+x,y,step = forward_euler(0,0.1,0,f,0.01)
 
-print(hasil)
+print(f'hasil  menggunakan euler forward di y({x}) = {y} dengan step{step}')
 
 
 def RK(x0,xn,y0,f,h):
@@ -37,5 +36,5 @@ def RK(x0,xn,y0,f,h):
 
     
 
-hasilRK = RK(0,0.1,0,f,0.01)
-print(hasilRK)
+x,y,step = RK(0,0.1,0,f,0.01)
+print(f'hasil menggunakan RK di y({x}) = {y} dengan step{step}')
